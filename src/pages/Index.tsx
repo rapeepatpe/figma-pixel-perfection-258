@@ -5,7 +5,7 @@ import LoginForm from '@/components/LoginForm';
 
 const Index: React.FC = () => {
   return (
-    <div className="w-screen h-screen relative overflow-hidden bg-black">
+    <div className="w-screen min-h-screen relative overflow-x-hidden bg-black">
       <BackgroundBlur />
       <Header />
       <LoginForm />
