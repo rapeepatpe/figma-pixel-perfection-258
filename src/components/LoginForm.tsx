@@ -98,11 +98,9 @@ const LoginForm: React.FC = () => {
               <button
                 type="submit"
                 onClick={handleSubmit}
-                className="flex w-[505px] h-[55px] justify-center items-center gap-2.5 px-5 rounded-md bg-gradient-to-r from-[#FF50E4] to-[#B60EE9] hover:from-[#FF50E4]/90 hover:to-[#B60EE9]/90 transition-all max-md:w-full max-sm:px-4 max-sm:h-10"
+                className="flex w-[505px] h-[55px] justify-center items-center gap-2.5 px-5 rounded-md bg-gradient-to-r from-[#FF50E4] to-[#B60EE9] hover:from-[#FF50E4]/90 hover:to-[#B60EE9]/90 transition-all max-md:w-full max-sm:px-4 max-sm:h-10 text-white text-base font-normal max-sm:text-sm"
               >
-                <span className="text-white text-base font-normal max-sm:text-sm">
-                  Login
-                </span>
+                Login
               </button>
 
               <div className="flex items-center gap-3.5 self-stretch max-sm:gap-2.5">
