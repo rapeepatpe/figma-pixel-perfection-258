@@ -98,7 +98,7 @@ const LoginForm: React.FC = () => {
               <button
                 type="submit"
                 onClick={handleSubmit}
-                className="flex w-full h-[55px] justify-center items-center rounded-md bg-gradient-to-r from-[#FF50E4] to-[#B60EE9] hover:from-[#FF50E4]/90 hover:to-[#B60EE9]/90 transition-all max-sm:h-10 text-white text-base font-normal max-sm:text-sm leading-none"
+                className="flex w-full h-[55px] justify-center items-center rounded-md bg-gradient-to-r from-[#FF50E4] to-[#B60EE9] hover:from-[#FF50E4]/90 hover:to-[#B60EE9]/90 transition-all transform hover:scale-105 max-sm:h-10 text-white text-base font-normal max-sm:text-sm leading-none"
               >
                 Login
               </button>
