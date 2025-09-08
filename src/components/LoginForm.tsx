@@ -21,10 +21,10 @@ const LoginForm: React.FC = () => {
   };
 
   return (
-    <main className="flex w-[532px] flex-col items-start gap-[70px] absolute -translate-x-2/4 left-2/4 top-[243px] max-md:w-[90%] max-md:max-w-[532px] max-md:-translate-x-2/4 max-md:left-2/4 max-sm:w-[95%] max-sm:px-5 max-sm:py-0 max-sm:top-[180px]">
-      <section className="flex flex-col items-start gap-[50px]">
+    <main className="flex w-[532px] flex-col items-center gap-[70px] absolute -translate-x-2/4 left-2/4 top-[243px] max-md:w-[90%] max-md:max-w-[532px] max-md:-translate-x-2/4 max-md:left-2/4 max-sm:w-[95%] max-sm:px-5 max-sm:py-0 max-sm:top-[180px]">
+      <section className="flex flex-col items-center mb-[64px] gap-[50px]">
         <header className="flex w-[505px] flex-col items-start gap-4 max-md:w-full">
-          <h1 className="self-stretch text-4xl font-bold leading-[41px] bg-clip-text text-white max-md:text-[32px] max-md:leading-9 max-sm:text-[28px] max-sm:leading-8">
+          <h1 className="self-stretch text-4xl font-bold leading-[36px] bg-gradient-to-r from-purple-500 via-pink-500 via-red-500 to-yellow-500 text-transparent bg-clip-text text-white max-md:text-[32px] max-md:leading-9 max-sm:text-[28px] max-sm:leading-8">
             Welcome back
           </h1>
           <p className="self-stretch text-[#8692A6] text-base font-normal leading-[25px] tracking-[0.08px] max-sm:text-sm max-sm:leading-5">
@@ -39,6 +39,7 @@ const LoginForm: React.FC = () => {
                 label="Email Address"
                 placeholder="Enter your email address"
                 type="email"
+                maxLength={30}
                 value={email}
                 onChange={setEmail}
                 required
@@ -48,6 +49,7 @@ const LoginForm: React.FC = () => {
                 label="Password"
                 placeholder="Enter your password"
                 type="password"
+                maxLength={30}
                 value={password}
                 onChange={setPassword}
                 showPasswordToggle
@@ -119,7 +121,9 @@ const LoginForm: React.FC = () => {
               <p className="text-[#9794AA] text-center text-base font-normal">
                 Don't have an account?{' '}
                 <button className="text-white underline hover:text-[#FF50E4] transition-colors">
-                  Sign up
+                  <p className="text-white underline  bg-gradient-to-r from-purple-500 to-pink-500 text-transparent bg-clip-text hover:text-[#FF50E4] transition-colors">
+                    Sign up
+                  </p>
                 </button>
               </p>
             </div>

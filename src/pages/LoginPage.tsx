@@ -3,12 +3,14 @@ import BackgroundBlur from '@/components/BackgroundBlur';
 import Header from '@/components/Header';
 import LoginForm from '@/components/LoginForm';
 
-const Index: React.FC = () => {
+const LoginPage: React.FC = () => {
   return (
-    <div>
-      Home
+    <div className="w-screen min-h-screen relative overflow-x-hidden bg-black">
+      <BackgroundBlur />
+      <Header />
+      <LoginForm />
     </div>
   );
 };
 
-export default Index;
+export default LoginPage;

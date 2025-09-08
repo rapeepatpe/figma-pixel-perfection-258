@@ -1,3 +1,4 @@
+import { kMaxLength } from 'buffer';
 import React, { useState } from 'react';
 
 interface InputFieldProps {
@@ -5,6 +6,7 @@ interface InputFieldProps {
   placeholder: string;
   type?: 'text' | 'email' | 'password';
   value: string;
+  maxLength:number;
   onChange: (value: string) => void;
   required?: boolean;
   showPasswordToggle?: boolean;
@@ -15,6 +17,7 @@ const InputField: React.FC<InputFieldProps> = ({
   placeholder,
   type = 'text',
   value,
+  maxLength,
   onChange,
   required = false,
   showPasswordToggle = false,
@@ -35,7 +38,6 @@ const InputField: React.FC<InputFieldProps> = ({
               onClick={() => setShowPassword(!showPassword)}
               className="text-[#49475A] text-right text-lg font-normal"
             >
-              {showPassword ? 'Hide' : 'Show'}
             </button>
           </div>
         )}
@@ -44,6 +46,7 @@ const InputField: React.FC<InputFieldProps> = ({
         <input
           type={inputType}
           value={value}
+          maxLength={maxLength}
           onChange={(e) => onChange(e.target.value)}
           placeholder={placeholder}
           className="flex-1 bg-transparent text-[#9794AA] text-base font-normal leading-[25px] max-sm:text-sm outline-none placeholder:text-[#9794AA]"
@@ -55,7 +58,8 @@ const InputField: React.FC<InputFieldProps> = ({
             className="ml-2"
             aria-label={showPassword ? 'Hide password' : 'Show password'}
           >
-            <svg
+            {showPassword && (
+              <svg
               width="24"
               height="24"
               viewBox="0 0 24 24"
@@ -67,6 +71,23 @@ const InputField: React.FC<InputFieldProps> = ({
                 fill="#9794AA"
               />
             </svg>
+            )}
+
+            {!showPassword && (
+              <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12 4.5C7.305 4.5 3.135 7.445 1.5 12C3.135 16.555 7.305 19.5 12 19.5C16.695 19.5 20.865 16.555 22.5 12C20.865 7.445 16.695 4.5 12 4.5ZM12 17C9.515 17 7.5 14.985 7.5 12.5C7.5 10.015 9.515 8 12 8C14.485 8 16.5 10.015 16.5 12.5C16.5 14.985 14.485 17 12 17ZM12 10C10.62 10 9.5 11.12 9.5 12.5C9.5 13.88 10.62 15 12 15C13.38 15 14.5 13.88 14.5 12.5C14.5 11.12 13.38 10 12 10Z"
+                fill="#9794AA"
+              />
+            </svg>
+            
+            )}   
           </button>
         )}
       </div>
