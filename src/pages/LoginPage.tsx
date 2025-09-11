@@ -2,13 +2,17 @@ import React from 'react';
 import BackgroundBlur from '@/components/BackgroundBlur';
 import Header from '@/components/Header';
 import LoginForm from '@/components/LoginForm';
+import { Footer } from '@/components/signup/Footer';
 
 const LoginPage: React.FC = () => {
   return (
-    <div className="w-screen min-h-screen relative overflow-x-hidden bg-black">
-      <BackgroundBlur />
+    <div className="w-[100%] min-h-screen flex flex-col overflow-x-hidden bg-black">
       <Header />
-      <LoginForm />
+      <div className="w-[100%] min-h-screen relative mb-[35vh] max-sm:mb-[-5vh]">
+        <BackgroundBlur />
+        <LoginForm />
+      </div>
+      <Footer />
     </div>
   );
 };

@@ -2,14 +2,14 @@ import React from 'react';
 
 const BackgroundBlur: React.FC = () => {
   return (
-    <div className="absolute inset-0">
+    <div className="absolute inset-0 z-0">
       <svg
         width="1440"
         height="1081"
         viewBox="0 0 1440 1081"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        className="absolute left-[50px] top-[323px] w-[1480px] h-[667px]"
+        className="absolute left-[4vw] top-[35vh] w-[95vw] h-[85vh] max-sm:top-[20vh]"
       >
         <g opacity="0.2" filter="url(#filter0_f_1_547)">
           <circle cx="1196.25" cy="636.942" r="243.752" fill="#FC4FF6" />

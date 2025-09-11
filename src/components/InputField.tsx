@@ -1,4 +1,3 @@
-import { kMaxLength } from 'buffer';
 import React, { useState } from 'react';
 
 interface InputFieldProps {
